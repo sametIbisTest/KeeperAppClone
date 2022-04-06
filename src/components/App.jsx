@@ -1,21 +1,21 @@
-import React, { useState } from "react";
-import Header from "./Header";
-import Footer from "./Footer";
-import Note from "./Note";
-import CreateArea from "./CreateArea";
+import React, { useState } from 'react'
+import Header from './Header'
+import Footer from './Footer'
+import Note from './Note'
+import CreateArea from './CreateArea'
 
 function App() {
-  const [items, setItems] = useState([]);
-  const [count, setCount] = useState(0);
+  const [items, setItems] = useState([])
+  const [count, setCount] = useState(2)
 
   function addItem(note) {
-    setItems([...items, note]);
-    setCount(count + 1);
+    setItems([...items, note])
+    setCount(count + 1)
   }
 
   function deleteItem(id) {
-    setItems(items.filter((item, index) => index !== id));
-    setCount(count - 1);
+    setItems(items.filter((item, index) => index !== id))
+    setCount(count - 1)
   }
 
   return (
@@ -33,7 +33,7 @@ function App() {
       ))}
       <Footer />
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
